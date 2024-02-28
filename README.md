@@ -23,19 +23,34 @@ df_exemplo = df_result_req(url_exemplo)
 
 ### 🔩 Analise da execução
 
+#### Primeira API 
 A primeira API utilizada é a de [Feriados Nacionais](https://brasilapi.com.br/api/feriados/v1/2024) para o ano de 2024. 
-```
-O DataFrame original contém 3 colunas 'date,name e type'.
+
+O DataFrame original contém 3 colunas 'date, name e type'.
 Na limpeza e tratamento dos dados:
     - Foi excluída a coluna 'type', visto que o DF se refere a feriados nacionais, e a coluna informava o tipo de feriado ('national' na informação).
     - Foram renomeadas as colunas
         * 'date' para 'Data';
-        * 'name' para 'Feriado Nacional'
+        * 'name' para 'Feriado Nacional'.
     - A coluna 'Data' foi atualizada para formato 'datetime'.
     - Foi definida a coluna 'Feriado Nacional' como index.
 O novo DataFrame com a base tratada foi inserida em uma nova variável, preservando os dados originais.
-```
 
+#### Segunda API 
+A segunda API utilizada é a de Cadastro das Instituições que aderiram ao [PIX](https://brasilapi.com.br/api/pix/v1/participants) atualizada até a data da extração. 
+
+O DataFrame original contém 6 colunas 'ispb, nome, nome_reduzido, modalidade_participacao, tipo_participacao e inicio_operacao'.
+Na limpeza e tratamento dos dados:
+    - Foram renomeadas as colunas
+        * 'nome' para 'Razão Social';
+        * 'nome_reduzido' para 'Nome';
+        * 'ispb' para 'ISPB';
+        * 'modalidade_participacao' para 'Modalidade';
+        * 'tipo_participacao' para 'Tipo';
+        * 'inicio_operacao' para 'Inicio da Operação'.
+    - A coluna 'Inicio da Operação' foi atualizada para formato 'datetime'.
+    - Foi definida a coluna 'ISPB' como index, por ser o Identificador de Sistema de Pagamentos Brasileiro (código único da instituição).
+O novo DataFrame com a base tratada foi inserida em uma nova variável, preservando os dados originais.
 
 ## 🛠️ Construído com:
 
