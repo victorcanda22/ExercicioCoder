@@ -39,21 +39,18 @@ O novo DataFrame com a base tratada foi inserida em uma nova variável, preserva
 #### Segunda API 
 A segunda API utilizada é a de Cadastro das Instituições que aderiram ao [PIX](https://brasilapi.com.br/api/pix/v1/participants) atualizada até a data da extração. 
 
-O DataFrame original contém 6 colunas 'ispb, nome, nome_reduzido, modalidade_participacao, tipo_participacao e inicio_operacao'.
+1. O DataFrame original contém 6 colunas 'ispb, nome, nome_reduzido, modalidade_participacao, tipo_participacao e inicio_operacao'.
+2. Na limpeza e tratamento dos dados:
+   - Foram renomeadas as colunas
+     - 'nome' para 'Razão Social';
+     - 'nome_reduzido' para 'Nome';
+     - 'ispb' para 'ISPB';
+     - 'modalidade_participacao' para 'Modalidade';
+     - 'tipo_participacao' para 'Tipo';
+     - 'inicio_operacao' para 'Inicio da Operação'.
+3. A coluna 'Inicio da Operação' foi atualizada para formato 'datetime'.
+4. Foi definida a coluna 'ISPB' como index, por ser o Identificador de Sistema de Pagamentos Brasileiro (código único da instituição).
 
-Na limpeza e tratamento dos dados:
-
-    - Foram renomeadas as colunas
-
-        * 'nome' para 'Razão Social';
-        
-        * 'nome_reduzido' para 'Nome';
-        * 'ispb' para 'ISPB';
-        * 'modalidade_participacao' para 'Modalidade';
-        * 'tipo_participacao' para 'Tipo';
-        * 'inicio_operacao' para 'Inicio da Operação'.
-    - A coluna 'Inicio da Operação' foi atualizada para formato 'datetime'.
-    - Foi definida a coluna 'ISPB' como index, por ser o Identificador de Sistema de Pagamentos Brasileiro (código único da instituição).
 O novo DataFrame com a base tratada foi inserida em uma nova variável, preservando os dados originais.
 
 ## 🛠️ Construído com:
