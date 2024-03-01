@@ -21,10 +21,10 @@ O projeto utiliza 3 URL's para analise, limpeza e tratamento dos dados:
 #### Importação das API's
 A importação das API's ocorrem via uma 'def' que tem por objetivo verificar o status da conexão da URL informada, e, em caso de sucesso, já salva o arquivo '.json' no uma variável informada no momento de rodar a 'def'. Na falha da conexão, ela não retorna nenhum dado. Em ambos casos um alerta é emitido, indicando o resultado da conexão. 
 
-'''
+```
 url_exemplo = 'https://www.exemplo.com.br/api'
 df_exemplo = df_result_req(url_exemplo)
-'''
+```
 
 ### 🔩 Analise da execução
 
