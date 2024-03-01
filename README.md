@@ -1,6 +1,6 @@
 # Projeto Final - Coder Turma 54375 Python
 
-Projeto que visa importar e tratar 3 bases de dados extraídas de um site com dados API.
+Projeto que visa a construção de um pipeline de dados que consiste em importar 3 bases de dados extraídas de um site com dados API, criar um alerta de sucesso ou falha na importação dessas bases, tratar cada uma individualmente, salvando seus dados para disponibilização e criar a documentação do projeto realizado.
 
 
 ### 📋 Pré-requisitos
@@ -12,14 +12,19 @@ Você precisa ter instalado:
 
 ## ⚙️ Executando
 
-O projeto utiliza 3 URL's para analise, limpeza e tratamento dos dados.
+O projeto utiliza 3 URL's para analise, limpeza e tratamento dos dados:
 
-Para testar a primeira etapa com uma nova URL que não sejam as já determinadas, é necessário informa-la na primeira etapa numa "variável_x", e depois criar um "df_x" utilizando a def "df_result_req" para criação desse df.
+1. [Feriados Nacionais](https://brasilapi.com.br/api/feriados/v1/2024) - lista dos feriados nacionais e suas datas no ano de 2024.
+2. [PIX](https://brasilapi.com.br/api/pix/v1/participants) - lista cadastral das instituições que utilizam o PIX no Brasil.
+3. [Corretoras de Investimento](https://brasilapi.com.br/api/cvm/corretoras/v1) - lista cadastral das instituições credenciadas para operar investimentos no Brasil.
 
-```
-url_exemplo = "www.urlexemplo.com.br"
+#### Importação das API's
+A importação das API's ocorrem via uma 'def' que tem por objetivo verificar o status da conexão da URL informada, e, em caso de sucesso, já salva o arquivo '.json' no uma variável informada no momento de rodar a 'def'. Na falha da conexão, ela não retorna nenhum dado. Em ambos casos um alerta é emitido, indicando o resultado da conexão. 
+
+'''
+url_exemplo = 'https://www.exemplo.com.br/api'
 df_exemplo = df_result_req(url_exemplo)
-```
+'''
 
 ### 🔩 Analise da execução
 
