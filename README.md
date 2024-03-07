@@ -90,6 +90,10 @@ A terceira API utilizada é a de Cadastro das [Corretoras de Investimento](https
 
 O novo DataFrame com a base tratada foi inserida em uma nova variável, preservando os dados originais.
 
+#### Criação do Banco de Dados
+
+Após o processo, todos os DataFrames foram salvos no banco de dados 'Banco_ProjetoCoder.bd' para consulta posterior
+
 ## 🛠️ Construído com:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
