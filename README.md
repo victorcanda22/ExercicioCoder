@@ -103,3 +103,4 @@ Nós usamos [GitHub](https://github.com/) para controle de versão. Para as vers
 
 * **Victor Canda** - *Trabalho Inicial* - [Git do Victor](https://github.com/victorcanda22/)
 * **Victor Canda** - *Documentação* - [Git do Victor](https://github.com/victorcanda22/)
+* **Wescley Trajano** - *Documentação* - [Git do Wescley](https://github.com/Wescley-Trajano/)
